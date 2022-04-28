@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+*{
+  padding:0;
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  width:100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container__left{
+  background-color: bisque;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container__right{
+  padding:10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container__App{
+  display: flex;
+  flex-direction: row;
+}
+.container__form{
+  width:80%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.container__checkbox{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label{
+width: 100%;
+text-align: left;
 }
+
+
+.input{
+  width: 100%;
+  padding:5px 3px;
+  margin:10px 5px;
+  border-radius: 3px;
+  border:1px solid #555;
+}
+input:focus{
+  border:1px solid #fff;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color:#0eb3ff ;
+}
+.input__areaCode{
+width:10%;
+}
+
+.input__phoneNumber{
+  width: 80%;
+
+}
+
+.input__checkbox{
+  margin:10px;
+}
+
+
+/* base button - Reusable */
+.button{
+  background-color: #444;
+  color:#fff;
+  font-size: 20px;
+  padding: 5px 26px;
+  border:1px solid #444;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* Signup button styling */
+.button__signUp{
+  width:100%;
+}
+
+.button__signUp:hover{
+  background-color: #e8e8e8;
+  border:1px solid #e8e8e8;
+  color:lightgreen;
+
+}
+
+ 

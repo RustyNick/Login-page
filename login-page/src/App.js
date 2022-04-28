@@ -1,9 +1,12 @@
 import './App.css';
+import LeftContainer from './component/LeftContainer';
+import RightContainer from './component/RightContainer';
 
 function App() {
   return (
-    <div className="App">
-     Blubb
+    <div className="container container__App">
+      <LeftContainer/>
+      <RightContainer/>
     </div>
   );
 }
