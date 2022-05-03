@@ -26,7 +26,7 @@ const togglePassword =()=>{
         <div className='container container__form__input'>
           <select className="input input__areaCode option">
             <option className='input' value="46" >SE (+46)</option>
-            <option className='input' value="65" > (+65)</option>
+            <option className='input' value="65" > SG(+65)</option>
             <option className='input' value="290" >STHL (+290)</option>
             <option className='input' value="386" >Sl (+386)</option>
           </select>
@@ -40,35 +40,26 @@ const togglePassword =()=>{
         
         <div className='container container__form__inner'>
         <div className='label__space__between'>
-        <label className='label label__input_title'>Choose password</label>
-        
-        <button className='button__show__toggle' onClick={togglePassword} > {buttonshow}</button>
-        
+          <label className='label label__input_title'>Choose password</label>
+          <button className='button__show__toggle' onClick={togglePassword} > {buttonshow}</button>
         </div>
 
         <input className="input" type={showPassword ? "text" : "password"} placeholder='It will be our secret' name="password"/> 
+        
         <div className='label__space__between'>
-
-        <label className='label'>Repeat Password</label>  
-        <button className='button__show__toggle' onClick={togglePassword} > {buttonshow}</button>
+          <label className='label'>Repeat Password</label>  
+          <button className='button__show__toggle' onClick={togglePassword} > {buttonshow}</button>
         </div>
-        
-        <input className="input" type={showPassword ? "text" : "password"} placeholder='' name="second-password"/>
+          <input className="input" type={showPassword ? "text" : "password"} placeholder='' name="second-password"/>
         </div>
-        
-        
-        <div className='container container__form__inner container__checkbox'>
-          
-        <div className='container__App'>
-          <input className='input__checkbox ' type="checkbox"  />  <div>I consent to the <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a></div>
-          </div>
-        <div className='container__App'>
-        <input className='input__checkbox ' type="checkbox"   />   <div>I want to recive stories for trends. inspirations, interior design tips and to be the first to learn about new products & campaings</div>
-          </div>
-
+          <div className='container container__form__inner container__checkbox'>
+            <div className='container__App'>
+              <input className='input__checkbox ' type="checkbox"  />  <div>I consent to the <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a></div>
+            </div>
+          <div className='container__App'>
+           <input className='input__checkbox ' type="checkbox"   />   <div>I want to recive stories for trends. inspirations, interior design tips and to be the first to learn about new products & campaings</div>
+            </div>
         </div>
-
-
         <button className="button button__signUp">Sign up</button>
     </div>
   )
