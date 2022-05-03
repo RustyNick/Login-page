@@ -26,7 +26,7 @@ const togglePassword =()=>{
         <div className='container container__form__input'>
           <select className="input input__areaCode option">
             <option className='input' value="46" >SE (+46)</option>
-            <option className='input' value="65" > (+65)</option>
+            <option className='input' value="65" > SG(+65)</option>
             <option className='input' value="290" >STHL (+290)</option>
             <option className='input' value="386" >Sl (+386)</option>
           </select>
