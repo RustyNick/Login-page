@@ -4,7 +4,7 @@ import RightContainer from './component/RightContainer';
 
 function App() {
   return (
-    <div className="container container__App">
+    <div className="container container__App container__wrapper">
       <LeftContainer/>
       <RightContainer/>
     </div>

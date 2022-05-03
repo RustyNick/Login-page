@@ -1,13 +1,13 @@
 import React from 'react'
-
+import PageTitle from './PageTitle'
 
 
 function Form() {
   return (
     <div className='container container__form' >
+        <PageTitle/>
         
-        <label className='label'>Phone Number</label>
-        
+        <label className='label container container__form__input'>Phone Number</label>
         <div className='container container__form__input'>
           <select className="input input__areaCode">
             <option className='input' value="sweden" >swe(+46)</option>
@@ -15,12 +15,12 @@ function Form() {
         <input className="input input__phoneNumber" placeholder=''/>
         </div>
 
-        <div className='container container__form'>
+        <div className='container container__form__inner'>
           <label className='label'>E-mail</label>
           <input className="input" placeholder=''/>
         </div>
         
-        <div className='container container__form'>
+        <div className='container container__form__inner'>
         <label className='label label__input_title'>Choose password</label>
         <input className="input" type="password" placeholder='It will be our secret'/>
         <label className='label'>repeat Password</label>
@@ -28,7 +28,7 @@ function Form() {
         </div>
         
         
-        <div className='container container__form container__checkbox'>
+        <div className='container container__form__inner container__checkbox'>
           
         <div className='container__App'>
           <input className='input__checkbox ' type="checkbox"  />  <div>I conset to the + <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a> </div>
