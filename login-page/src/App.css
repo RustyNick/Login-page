@@ -18,6 +18,10 @@
   width:100%;
 }
 
+.container__App{
+  display: flex;
+  flex-direction: row;
+}
 .container__left{
   width:100%;
 }
@@ -27,10 +31,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.container__App{
-  display: flex;
-  flex-direction: row;
 }
 
 .container__form{
