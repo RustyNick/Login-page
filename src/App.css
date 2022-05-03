@@ -71,6 +71,12 @@ margin-top: 0.5rem;
 margin-bottom: 0.5rem;
 }
 
+.label__space__between{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 input{
   width: 100%;
 }
@@ -131,6 +137,11 @@ min-width:80px;
   border:1px solid #999;
 }
 
+.button__show__toggle{
+  background-color: #fff;
+  border: none;
+  color: #444;
+}
  
 img{
   width:100%;
