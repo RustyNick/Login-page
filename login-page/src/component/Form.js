@@ -1,8 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
+/* import {AiFillEye} from '../react-icons/AiFillEye'; */
+
+/* AiFillEyeInvisible */
+
 import PageTitle from './PageTitle'
 
 
+
 function Form() {
+  const[showPassword, setShowPassword] = useState(false);
+
+
+const togglePassword =()=>{
+  setShowPassword(!showPassword)
+}
+
   return (
     <div className='container container__form' >
         <PageTitle/>
@@ -21,17 +33,21 @@ function Form() {
         </div>
         
         <div className='container container__form__inner'>
-        <label className='label label__input_title'>Choose password</label>
-        <input className="input" type="password" placeholder='It will be our secret'/>
-        <label className='label'>repeat Password</label>
-        <input className="input" type="password" placeholder=''/>
+        
+        <label className='label label__input_title'>Choose password</label> <button onClick={togglePassword} >toggle</button>
+
+        <input className="input" type={showPassword ? "text" : "password"} placeholder='It will be our secret' name="password"/> 
+        
+        <label className='label'>repeat Password</label>  <button onClick={togglePassword} > toggle </button>
+        
+        <input className="input" type={showPassword ? "text" : "password"} placeholder='' name="second-password"/>
         </div>
         
         
         <div className='container container__form__inner container__checkbox'>
           
         <div className='container__App'>
-          <input className='input__checkbox ' type="checkbox"  />  <div>I conset to the + <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a> </div>
+          <input className='input__checkbox ' type="checkbox"  />  <div>I conset to the <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a></div>
           </div>
         <div className='container__App'>
         <input className='input__checkbox ' type="checkbox"   />   <div>I want to recive stories for trends. inspirations, interior design tips and to be the first to learn about new products & campaings</div>
