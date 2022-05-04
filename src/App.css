@@ -3,6 +3,10 @@
   margin:0;
 }
 
+a{
+  color: #777;
+}
+
 .title{
   width: 100%;
   display:flex;
