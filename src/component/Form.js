@@ -7,22 +7,35 @@ import { FaEye,FaEyeSlash } from 'react-icons/fa';
 function Form() {
   const[showPassword, setShowPassword] = useState(false);
   const[buttonshow, setButtonShow] = useState(<FaEye/>)
-  const[newUserinfo, setNewUserinfo] = useState({name:"", email:"",password:""})
+  const[newUserinfo, setNewUserinfo] = useState({email:"",password:"", phone:""})
 
-  let state = newUserinfo;
-
-const togglePassword =()=>{
-  setShowPassword(!showPassword)
-  if(!showPassword){
-    setButtonShow(<FaEyeSlash/>)
-  }
-  if(showPassword){
-    setButtonShow(<FaEye/>)
+  
+  const togglePassword =()=>{
+    setShowPassword(!showPassword)
+    if(!showPassword){
+      setButtonShow(<FaEyeSlash/>)
+    }
+    if(showPassword){
+      setButtonShow(<FaEye/>)
   }
 }
 
+const handleSubmit=(e)=>{
+  e.preventDefault();
+  console.log(newUserinfo)
+  setNewUserinfo(
+    {
+     email:"An email",
+     password:"some passwords", 
+     phone:"some phones"
+    }
+  )
+}
+
+
+
   return (
-    <div className='container container__form' >
+    <form className='container container__form' onSubmit={handleSubmit}>
         <PageTitle/>
         <label className='label container container__form__input'>Phone Number</label>
         <div className='container container__form__input'>
@@ -32,7 +45,7 @@ const togglePassword =()=>{
             <option className='input' value="290" >STHL (+290)</option>
             <option className='input' value="386" >Sl (+386)</option>
           </select>
-        <input className="input input__phoneNumber" placeholder=''/>
+        <input className="input input__phoneNumber"  placeholder=''/>
         </div>
         
         <div className='container container__form__inner'>
@@ -46,7 +59,7 @@ const togglePassword =()=>{
           <button className='button__show__toggle' onClick={togglePassword} > {buttonshow}</button>
         </div>
 
-        <input className="input" type={showPassword ? "text" : "password"} placeholder='It will be our secret' name="password"/> 
+        <input className="input" type={showPassword ? "text" : "password"}  placeholder='It will be our secret' name="password"/> 
         
         <div className='label__space__between'>
           <label className='label'>Repeat Password</label>  
@@ -62,8 +75,8 @@ const togglePassword =()=>{
            <input className='input__checkbox ' type="checkbox"   />   <div>I want to recive stories for trends. inspirations, interior design tips and to be the first to learn about new products & campaings</div>
             </div>
         </div>
-        <button className="button button__signUp">Sign up</button>
-    </div>
+        <button className="button button__signUp" type="submit">Sign up</button>
+    </form>
   )
 }
 
